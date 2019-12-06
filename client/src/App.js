@@ -16,13 +16,11 @@ class App extends React.Component {
     componentDidMount () {
         axios.get('http://localhost:5000/api/players')
             .then(re => {
-                console.log(re);
                 this.setState({playerList: re.data});
             });
     }
 
     render () {
-        console.log('this.state', this.state.playerList);
         return (
             <div className="App">
                 <Header/>

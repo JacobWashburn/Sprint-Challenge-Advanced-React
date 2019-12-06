@@ -10,7 +10,7 @@ const PlayersListWrapper = styled.div`
 
 const PlayersList = ({players}) => {
     return (
-        <PlayersListWrapper>
+        <PlayersListWrapper data-testid='List'>
             {players.map(player => <PlayerCard key={player.name} player={player}/>)}
         </PlayersListWrapper>
     );
